@@ -17,8 +17,8 @@ class HTML_Element {
 	private $styles = [];
 	private $tag_name;
 
-	public function __construct( $tag_name, $self_closed_tag, $id = null, $classes = [] ) {
-		$this->content = '';
+	public function __construct( $tag_name, $self_closed_tag, $id = null, $classes = [], $content = '' ) {
+		$this->content = $content;
 		$this->tag_name = $tag_name;
 		$this->theme = new HTML_Theme();
 		$this->self_closed_tag = $self_closed_tag;
@@ -58,7 +58,7 @@ class HTML_Element {
 		if ( $this->tag_name === null ) {
 			return $this->build_html_ghost();
 		} else if ( $this->self_closed_tag === true ) {
-			return $this->build_self_closed_html();
+			return $this->build_html_self_closed();
 		} else {
 			return $this->build_html_non_self_closed();
 		}

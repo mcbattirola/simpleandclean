@@ -25,3 +25,9 @@ html, body {
 .main-header-subtitle {
     font-size: 1.125rem;
 }
+
+.main-content {
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
