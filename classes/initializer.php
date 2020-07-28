@@ -51,6 +51,7 @@ class SNC_Initializer {
                 include_once dirname( __FILE__ ) . '/components/panel-ribbon.php';
                 include_once dirname( __FILE__ ) . '/components/paragraph.php';
                 include_once dirname( __FILE__ ) . '/main-header.php';
+                include_once dirname( __FILE__ ) . '/main-footer.php';
                 include_once dirname( __FILE__ ) . '/pages/base-page.php';
                 include_once dirname( __FILE__ ) . '/pages/front-page.php';
                 // include_once dirname( __FILE__ ) . '/pages/simple-page.php';

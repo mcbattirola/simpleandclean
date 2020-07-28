@@ -31,3 +31,11 @@ html, body {
     margin: auto;
     margin-top: 3rem;
 }
+
+.main-footer {
+    background-color: #22282d;
+    color: #ffffff;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
