@@ -7,14 +7,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 class SNC_Initializer {
-	public static function init() {    
-                include_once dirname( __FILE__ ) . '/main-section.php';
-                include_once dirname( __FILE__ ) . '/header.php';
+        public static function init() {
+                if ( ! current_user_can( 'manage_options' ) ) {
+                        show_admin_bar( false );
+                }
+                SNC_Initializer::add_styles();
+                SNC_Initializer::add_includes();
+        }
+
+        public static function add_styles() {
+                wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css' );
+        }
+
+	public static function add_includes() {    
                 include_once dirname( __FILE__ ) . '/settings.php';
                 include_once dirname( __FILE__ ) . '/utils/html-element.php';
                 include_once dirname( __FILE__ ) . '/utils/html-theme.php';
                 // include_once dirname( __FILE__ ) . '/utils/security.php';
                 // include_once dirname( __FILE__ ) . '/utils/template.php';
+                include_once dirname( __FILE__ ) . '/components/main-component.php';
                 include_once dirname( __FILE__ ) . '/components/component.php';
                 include_once dirname( __FILE__ ) . '/components/component_generic.php';
                 include_once dirname( __FILE__ ) . '/components/component_ghost.php';
@@ -39,6 +50,9 @@ class SNC_Initializer {
                 include_once dirname( __FILE__ ) . '/components/panel-footer-submit.php';
                 include_once dirname( __FILE__ ) . '/components/panel-ribbon.php';
                 include_once dirname( __FILE__ ) . '/components/paragraph.php';
+                include_once dirname( __FILE__ ) . '/main-header.php';
+                include_once dirname( __FILE__ ) . '/pages/base-page.php';
+                include_once dirname( __FILE__ ) . '/pages/front-page.php';
                 // include_once dirname( __FILE__ ) . '/pages/simple-page.php';
                 // include_once dirname( __FILE__ ) . '/menu.php';		
 	}

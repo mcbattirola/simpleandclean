@@ -1,6 +1,6 @@
 <?php
 
-use SNC\Header;
+use SNC\Main_Header;
 
-$header = new Header();
-$header->init();
+$header = new Main_header();
+$header->build_html();

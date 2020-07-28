@@ -1,6 +1,6 @@
 <?php
 
-use SNC\Header;
+use SNC\Pages\Front_Page;
 
-$header = new Header();
-$header->init();
+$front_page = new Front_Page();
+$front_page->build_html();

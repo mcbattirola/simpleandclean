@@ -5,3 +5,23 @@ Version: 0.1.0
 Description: Simple template
 Author: Matheus Battirola
 */
+
+html, body {
+    margin: 0 !important;
+    font-family: sans-serif, "Libre Franklin", "Helvetica Neue", helvetica, arial;
+}
+
+.main-header {
+    background-color: #22282d;
+    color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-header-title {
+    text-transform: uppercase;
+}
+
+.main-header-subtitle {
+    font-size: 1.125rem;
+}

@@ -1,5 +1,5 @@
 <?php
-namespace SNC;
+namespace SNC\Components;
 
 use SNC\Components\Component;
 
@@ -18,7 +18,7 @@ abstract class Main_Component {
 		return $this->component;
 	}
 
-	public function init() {
+	public function build_html() {
         echo $this->get_component()->build_html();
     }
 }
