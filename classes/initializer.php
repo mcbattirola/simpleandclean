@@ -54,7 +54,6 @@ class SNC_Initializer {
                 include_once dirname( __FILE__ ) . '/main-footer.php';
                 include_once dirname( __FILE__ ) . '/pages/base-page.php';
                 include_once dirname( __FILE__ ) . '/pages/front-page.php';
-                // include_once dirname( __FILE__ ) . '/pages/simple-page.php';
-                // include_once dirname( __FILE__ ) . '/menu.php';		
+                include_once dirname( __FILE__ ) . '/pages/single-page.php';
 	}
 }

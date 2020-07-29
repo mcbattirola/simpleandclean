@@ -7,18 +7,23 @@ Author: Matheus Battirola
 */
 
 html, body {
-    margin: 0 !important;
+    margin: 0;
     font-family: sans-serif, "Libre Franklin", "Helvetica Neue", helvetica, arial;
 }
 
 .main-header {
     background-color: #22282d;
+    box-sizing: border-box;
     color: #ffffff;
     padding: 2rem;
+    height: 8rem;
     text-align: center;
 }
 
-.main-header-title {
+.main-header-title, .main-header-title:visited, .main-header-title:active {
+    color: #ffffff;
+    font-size: 2rem;
+    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -27,15 +32,58 @@ html, body {
 }
 
 .main-content {
-    width: 70%;
-    margin: auto;
-    margin-top: 3rem;
+    width: 60%;
+    margin: 3rem auto;
+    min-height: calc(100vh - 2rem - 8rem - 6rem - 3rem);
 }
 
 .main-footer {
     background-color: #22282d;
     color: #ffffff;
-    margin-top: 2rem;
     text-align: center;
-    padding: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.nav-links {
+    margin-top: 3rem;
+    color: #22282d;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.single-title {
+    font-size: 3rem;
+}
+
+.single-content {
+    font-size: 1.375em;
+}
+
+.single-navigation .nav-links {
+    text-align: center;
+}
+
+.single-navigation .nav-previous, .nav-next {
+    display: inline-block;
+}
+
+.single-navigation .nav-previous a, .nav-next a{
+    border-radius: 0.4rem;
+    display: block;
+    margin-right: 1rem;
+    background-color: lightgray;
+    padding: 0.5rem;
+}
+
+.single-navigation .nav-previous a:hover, .nav-next a:hover {
+    background-color: #22282d;
+    color: #ffffff;
+    text-decoration: none;
 }

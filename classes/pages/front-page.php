@@ -21,28 +21,14 @@ class Front_Page extends Base_Page {
 
         $main_section->append_child( $this->get_posts() );
 
-        $pagination = new Component( 'div', false, null, [], get_the_posts_pagination( 
-            array( 
-                'mid_size'  => 2 ,
-                'prev_text' => __( 'Newer', 'textdomain' ),
-                'next_text' => __( 'Older', 'textdomain' ),
-                ) 
-            ) 
+        $pagination = new Component( 'div', false, null, [], get_the_posts_pagination( array( 
+            'mid_size'  => 2 ,
+            'prev_text' => __( 'Newer', 'SNC' ),
+            'next_text' => __( 'Older', 'SNC' ),
+            'screen_reader_text' => ' ',
+            ) ) 
         );
 
-        // $pagination = new Component( 'div', false, null, [], get_the_posts_pagination( array(
-        //     'mid_size'  => 2,
-        //     'prev_text' => sprintf(
-        //         '%s <span class="nav-prev-text">%s</span>',
-        //         null,
-        //         __( 'Newer posts', 'twentynineteen' )
-        //     ),
-        //     'next_text' => sprintf(
-        //         '<span class="nav-next-text">%s</span> %s',
-        //         __( 'Older posts', 'twentynineteen' ),
-        //         null
-        //     ),
-        // ) ) );
         $main_section->append_child( $pagination );
 
         parent::__construct( $main_section );
@@ -56,11 +42,6 @@ class Front_Page extends Base_Page {
             'numberposts' => -1
             )
         );
-
-        // foreach ( $posts as $post ) {
-        //     $post_article = $this->get_post_article( $post );
-        //     $posts_container->append_child( $post_article );
-        // }
 
         if ( have_posts() ) {
             while ( have_posts() ) {
