@@ -15,8 +15,8 @@ html, body {
     background-color: #22282d;
     box-sizing: border-box;
     color: #ffffff;
-    padding: 2rem;
     height: 8rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -32,22 +32,22 @@ html, body {
 }
 
 .main-content {
-    width: 60%;
     margin: 3rem auto;
     min-height: calc(100vh - 2rem - 8rem - 6rem - 3rem);
+    width: 60%;
 }
 
 .main-footer {
     background-color: #22282d;
     color: #ffffff;
-    text-align: center;
     height: 3rem;
     line-height: 3rem;
+    text-align: center;
 }
 
 .nav-links {
-    margin-top: 3rem;
     color: #22282d;
+    margin-top: 3rem;
 }
 
 .nav-links a {
@@ -67,9 +67,9 @@ html, body {
 }
 
 .post-list-item-info {
-    text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .post-list-item-title {
@@ -96,9 +96,9 @@ html, body {
 }
 
 .single-time {
-    text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .single-content {
