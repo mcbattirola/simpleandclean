@@ -19,8 +19,8 @@ class Single_Page extends Base_Page {
 
         $pagination = new Component( 'div', false, null, array( 'single-navigation' ), get_the_post_navigation( array( 
             'mid_size'  => 2 ,
-            'prev_text' => __( 'Next', 'SNC' ),
-            'next_text' => __( 'Previous', 'SNC' ),
+            'prev_text' => __( 'Previous', 'SNC' ),
+            'next_text' => __( 'Next', 'SNC' ),
             'screen_reader_text' => ' ',
             ) ) 
         );
@@ -33,16 +33,16 @@ class Single_Page extends Base_Page {
         $content_container = new Component( 'div', false, null, array( 'single-container' ) );
         while( have_posts() ) {
             the_post();
-            $page_content = new Component( 'div', false, null );
+            $page_content = new Component( 'article', false, null );
+
+            $author_and_time = new Component( 'div', false, null, array( 'single-time' ), get_the_time('F j, Y') . ' by ' . get_the_author() );
+            $page_content->append_child( $author_and_time );
 
             $title = new Component( 'h1', false, null, array( 'single-title' ), get_the_title() );
             $page_content->append_child( $title );
 
             $excerpt = new Component( 'div', false, null, array( 'single-excerpt' ), get_the_excerpt() );
             $page_content->append_child( $excerpt );
-
-            $author_and_time = new Component( 'div', false, null, array( 'single-time' ), get_the_time('F j, Y') . ', ' . get_the_author() );
-            $page_content->append_child( $author_and_time );
 
             $post_content = new Component( 'div', false, null, array( 'single-content' ), get_the_content() );
             $page_content->append_child( $post_content );

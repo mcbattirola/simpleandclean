@@ -57,13 +57,16 @@ class Front_Page extends Base_Page {
     private function get_post_article() {
         $article = new Component( 'article', false, null, array( 'post-list-item' ) );
 
-        $post_date = new Component( 'span', false, null, array( 'post-list-item-date' ), get_the_date() );
-        $article->append_child( $post_date );
+        $post_info = new Component( 'div', false, null, array( 'post-list-item-info' ) );
+
+        $post_time = new Component( 'span', false, null, array( 'post-list-item-time' ), get_the_date() );
+        $post_info->append_child( $post_time );
 
         $post_author = new Component( 'span', false, null, array( 'post-list-item-author' ), ', ' . get_the_author() );
-        $article->append_child( $post_author );
+        $post_info->append_child( $post_author );
+        $article->append_child( $post_info );
 
-        $title = new Component( 'h4', false, null, array( 'post-list-item-title' ) );
+        $title = new Component( 'h3', false, null, array( 'post-list-item-title' ) );
         $title_anchor = new Component( 'a', false, null, [], get_the_title() );
         $title_anchor->add_attribute( 'href', esc_url( get_permalink() ) );
         $title->append_child( $title_anchor );
