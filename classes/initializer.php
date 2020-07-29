@@ -23,8 +23,7 @@ class SNC_Initializer {
                 include_once dirname( __FILE__ ) . '/settings.php';
                 include_once dirname( __FILE__ ) . '/utils/html-element.php';
                 include_once dirname( __FILE__ ) . '/utils/html-theme.php';
-                // include_once dirname( __FILE__ ) . '/utils/security.php';
-                // include_once dirname( __FILE__ ) . '/utils/template.php';
+                include_once dirname( __FILE__ ) . '/utils/security.php';
                 include_once dirname( __FILE__ ) . '/components/main-component.php';
                 include_once dirname( __FILE__ ) . '/components/component.php';
                 include_once dirname( __FILE__ ) . '/components/component_generic.php';
